@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+        <title>Employee survey</title>
+        <body bgcolor="powderblue">
+           <center><h1 style="font-size:42px">CUSTOMER FEEDBACK ON EMPLOYEE</h1><br><br><br><br>
+            <form action="http://127.0.0.1:5000/process"method="post","get">
+ <div style="font-size:35px;background-color:wheat">              
+    <B><p>Customer Name:<input type="text" name="customer_name" required style="font-size:25px;"></p>
+
+<p>
+    <h3> Select employee: 
+        <select type="text" name="emp" required="required"  style="font-size:25px;">
+        <option value="Emp_001">Emp_001</option>
+        <option value="Emp_002">Emp_002</option>
+        <option value="Emp_003">Emp_003</option>
+        <option value="Emp_004">Emp_004</option>
+         <option value="Emp_005">Emp_005</option>
+        </h3></B>
+      </select><br><br>
+        Review:<textarea  name="review" rows="4" cols="50" style="font-size:24px;"></textarea>
+
+
+</p>
+
+
+
+<button type="submit" style="font-size:23px;color:black;" class="btn btn-primary btn-block btn-large">submit</button>
+            </form></div> 
+            <h2 style="color:green;">{{solu}}</h4></center>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'no_of_reviews'],
+          ['Employee_1',     {{review[0]}}],
+          ['Employee_2',      {{review[1]}}],
+          ['Employee_3',  {{review[2]}}],
+          ['Employee_4', {{review[3]}}],
+          ['Employee_5',    {{review[4]}}]
+        ]);
+
+        var options = {
+          title: 'No_of_reviews_got_from_customer',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('Employee_score'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+<script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'score'],
+        ['Employee_1',    {{score[0]}}],
+        ['Employee_2',       {{score[1]}}],
+        ['Employee_3',   {{score[2]}}],
+        ['Employee_4',  {{score[3]}}],
+        ['Employee_5',     {{score[4]}}]
+      ]);
+
+      var options = {
+        title: 'Score_for_the_employee',
+        is3D: true,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('Employee_review_count'));
+      chart.draw(data, options);
+    }
+  </script>
+
+    <style>
+        .chart
+        {
+            margin:20;
+            display:flex;
+        }
+    </style>
+
+  </head>
+  <body bgcolor="#ffff99">
+  <center><h1>EMPLOYEE SCORE REPORT</h1></center><BR><BR>
+      <div class = "chart">
+    <div id="Employee_score" style="width: 900px; height: 500px;"></div>
+    <div id="Employee_review_count" style="width: 900px; height: 500px;"></div>
+      </div>
+  </body>
+</html>
